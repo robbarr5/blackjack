@@ -1,0 +1,47 @@
+
+// create deck logic (not necessary here but future proofs for multiple card games)
+
+- 26 possible values (black vs red)
+- values are between 1 and 13
+
+
+//game starts
+
+
+For the dealer generate 1 random card
+
+For the player generate 2 random cards
+
+
+store value of dealer 
+store value of player 
+
+prompt player to:
+	- Hit
+	- Stand
+
+if player clicks stand:
+	- generate additional random card to dealer
+	- check if new total value >= 21
+	- if above 18 below 21 then stop
+	- if value is below 17 gen additional card
+	- compare final value to player 
+
+if player clicks hit:
+	- generate additional random card to player
+	- check if new total value >= 21
+		- if value === 21 then show a win
+		- if value < 21 then show hit/stand options
+			- if player stands then generate a final additional card to dealer and compare values
+				- if player clicks hit then generate an additional card to player
+	- compare final value to player 
+
+
+
+// nice to haves
+
+Differentiate Aces as 1 OR 13
+Add in availability of 5 cards to each player
+Show value of cards at each stage
+Append cash value on a win / loss
+Enable/disable buttons between rounds
