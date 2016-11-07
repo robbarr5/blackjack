@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BlackJack</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Rob's BlackJack">
+
+  <link rel="stylesheet" href="css.css">
+  <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+  <script  type="text/javascript" src="javascript.js"></script>
+</head>
+
+<body>
+
+<h1>Rob's Casino</h1>
+
+<div id="dealer">
+	<h2>Dealer</h2>
+</div>
+
+
+<div id="player">
+	<h2>Player</h2>
+</div>
+
+
+<form id="actions">
+	<div id="userActions">
+    	<input id="hit"       class="button" type="reset" value="Hit"        onclick="playerHit();return false;"   disabled="disabled" />
+    	<input id="stand"     class="button" type="reset" value="Stand"      onclick="playerStand();return false;" disabled="disabled" />
+  </div>
+</form>
+
+</body>
+</html>
