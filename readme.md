@@ -21,3 +21,10 @@ Nice to haves:
 	- Have a cash balanace allowing users to bet on an upcoming deal
 	- Don't allow for an already used card to be available in the "deck"
 	- Populate the win/loss stats
+	- Dynamically populate available buttons based on game "stage"
+
+Technologies used:
+
+	- Javascript 5 for the game logic
+	- HTML/CSS for browser operations
+	- JQuery to drive game logic via browser
