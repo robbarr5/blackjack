@@ -89,7 +89,7 @@ var Hand = function(){
        string = "";
        
        for (i = 0; i<cardArray.length; i++) {
-        string += cardArray[i].getNumber() + " of suit " + cardArray[i].getSuit()+" ";
+        string += cardArray[i].getNumber() + " of " + cardArray[i].getSuit()+" ";
 };
      return string;
 
