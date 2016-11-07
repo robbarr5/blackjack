@@ -31,6 +31,7 @@ function Card(suit, number) {
             	return "Clubs";
         	}
         };
+        
         this.getValue = function() {
         //Assign card values based on array position	
         // if its a face card, number should be set to 10
@@ -140,16 +141,20 @@ var playAsUser = function(){
 var declareWinner = function(userHand, dealerHand){
     var userHand = playerHand.score();
     var dealerHand = dealerHand.score();
+    var wins = 0;
+    var losses = 0;
     
     if ((userHand > dealerHand || dealerHand > 21) && userHand <= 21){
-    console.log('You win!');
+    	return('You win!');
+    	wins ++;
     }
     else if ((userHand < dealerHand || userHand > 21) && dealerHand <= 21){
-    console.log('You lose!');
-}
+    	console.log('You lose!');
+    	losses ++;
+	}
     else if (userHand === dealerHand || (userHand > 21 && dealerHand > 21)){
-    console.log('You tied!');
-}
+    	console.log('You tied!');
+	}
 }
 
 declareWinner(playAsUser(),playAsDealer());
@@ -160,6 +165,19 @@ declareWinner(playAsUser(),playAsDealer());
 //newDeal.hitMe();
 //console.log("Your hand is now "+ newDeal.printHand() + 
 //        " and your score is now " + newDeal.score());
+
+// $( ".dealer" ).append( document.createTextNode( "Hello" ) );
+// $('#values').text('new-dynamic-text');
+
+//Page interactions
+//User button operators
+var $dealButton = $("#deal"),
+    $standButton = $("#stand"),
+    $hitButton = $("#hitMe");
+
+
+
+
 
 
 

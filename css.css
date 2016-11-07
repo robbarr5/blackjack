@@ -1,0 +1,31 @@
+body {
+	background-image: url("assets/tabletop.jpg");
+	margin-left: 20px;
+}
+
+h1 {
+	color: white;
+	font-family: Tahoma
+}
+
+h2 {
+	color: white;
+	font-family: Tahoma
+}
+
+.button {
+	color: blue;
+}
+
+.card-values{
+	font-family: Tahoma;
+	color: lightgrey;
+	margin-left: 25px;
+}
+
+.hand-result{
+	font-family: Tahoma;
+	color: lightgrey;
+	margin-left: 25px; 
+
+}
