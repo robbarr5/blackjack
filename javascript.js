@@ -31,7 +31,7 @@ function Card(suit, number) {
             	return "Clubs";
         	}
         };
-        
+
         this.getValue = function() {
         //Assign card values based on array position	
         // if its a face card, number should be set to 10
@@ -125,7 +125,7 @@ console.log("The dealer's hand is " + dealerHand.printHand() + "and their score 
 var playAsUser = function(){
     playerHand = new Hand();
     
-    var decision = confirm("Your hand is " +playerHand.score() + ": Hit OK to hit or Cancel to stand");
+    var decision = confirm("Your score is " +playerHand.score() + " and your hand is " +playerHand.printHand() + " Hit OK to hit or Cancel to stand");
     while(decision) {
         playerHand.hitMe();
         decision = confirm("Your cards: " +playerHand.printHand()

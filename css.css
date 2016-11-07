@@ -13,19 +13,30 @@ h2 {
 	font-family: Tahoma
 }
 
-.button {
+#button {
 	color: blue;
 }
 
-.card-values{
+#card-values{
 	font-family: Tahoma;
 	color: lightgrey;
 	margin-left: 25px;
 }
 
-.hand-result{
+#hand-result{
 	font-family: Tahoma;
 	color: lightgrey;
 	margin-left: 25px; 
+
+}
+
+#player{
+	margin-left: 15px; 
+
+}
+
+#dealer{
+	margin-left: 15px; 
+	margin-top: 25px
 
 }
