@@ -119,7 +119,8 @@ var dealer = playAsDealer();
 console.log("The dealer's hand is " + dealerHand.printHand() + "and their score is " + dealerHand.score());
 //Display the result in the browser
 //Jquery isn't working - really struggling to debug
-$('#dealer-card-values').append(playAsDealer());
+
+$('#dealer-card-values').append(document.createTextNode(dealerHand));
 
 
 
