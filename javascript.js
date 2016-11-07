@@ -117,6 +117,10 @@ var playAsDealer = function(){
 
 var dealer = playAsDealer();
 console.log("The dealer's hand is " + dealerHand.printHand() + "and their score is " + dealerHand.score());
+//Display the result in the browser
+//Jquery isn't working - really struggling to debug
+$('#dealer-card-values').append(playAsDealer());
+
 
 
 //Player interaction logic
@@ -141,24 +145,29 @@ var playAsUser = function(){
 var declareWinner = function(userHand, dealerHand){
     var userHand = playerHand.score();
     var dealerHand = dealerHand.score();
+    var result;
     var wins = 0;
     var losses = 0;
     
     if ((userHand > dealerHand || dealerHand > 21) && userHand <= 21){
-    	return('You win!');
+    	result = "You win!";
     	wins ++;
+    	console.log('You win!');
     }
     else if ((userHand < dealerHand || userHand > 21) && dealerHand <= 21){
-    	console.log('You lose!');
+    	result = "You lose!";
     	losses ++;
+    	console.log('You lose!');
 	}
     else if (userHand === dealerHand || (userHand > 21 && dealerHand > 21)){
+    	result = "You tied!"
     	console.log('You tied!');
 	}
 }
 
 declareWinner(playAsUser(),playAsDealer());
-//Testing the code
+
+//Testing code
 //var newDeal = new Hand();
 //console.log("Your hand is " + newDeal.printHand());
 //console.log("Your score is " + newDeal.score());
@@ -166,14 +175,14 @@ declareWinner(playAsUser(),playAsDealer());
 //console.log("Your hand is now "+ newDeal.printHand() + 
 //        " and your score is now " + newDeal.score());
 
-// $( ".dealer" ).append( document.createTextNode( "Hello" ) );
-// $('#values').text('new-dynamic-text');
 
 //Page interactions
 //User button operators
 var $dealButton = $("#deal"),
     $standButton = $("#stand"),
     $hitButton = $("#hitMe");
+
+
 
 
 
