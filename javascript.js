@@ -3,6 +3,7 @@ function Card(suit, number) {
         this.suit = suit;
         this.number = number;
 
+        this.suitList = [null, "Diamonds", "Hearts", "Spades"]
         //Set return number as card value
         this.getNumber = function(){
         	if (number===11){
@@ -19,17 +20,11 @@ function Card(suit, number) {
         };
 
 
+
+
         //Set return suit as suit type
         this.getSuit = function(){
-        	if (suit===1){
-            	return "Diamonds";
-        	}else if (suit===2){
-            	return "Hearts";
-        	}else if (suit===3){
-            	return "Spades";
-        	}else {
-            	return "Clubs";
-        	}
+        	return suit < 3 ? this.suitList[suit] : "Clubs";
         };
 
         this.getValue = function() {
@@ -71,19 +66,19 @@ var Hand = function(){
         var sum = 0;
         var aces = 0;
         for (i = 0; i<cardArray.length; i++) {
-        sum += cardArray[i].getValue();
-        
-        //Check for aces to ensure appropriate value of 1 or 11 is used
-        //Log the number of aces and reduce the total sum by 10 if the overall score is greater than 21
-        if (cardArray[i].getValue() === 11)
-        aces++;
-        while (sum > 21 && aces > 0){
-        sum -= 10;
-        aces--;
-        }       
-    }
-    return sum;
-};
+	        sum += cardArray[i].getValue();
+	        
+	        //Check for aces to ensure appropriate value of 1 or 11 is used
+	        //Log the number of aces and reduce the total sum by 10 if the overall score is greater than 21
+	        if (cardArray[i].getValue() === 11)
+	        	aces++;
+	        while (sum > 21 && aces > 0){
+		        sum -= 10;
+		        aces--;
+	        }       
+    	}
+    	return sum;
+	};
 
     this.printHand = function () {
        string = "";
@@ -121,7 +116,6 @@ console.log("The dealer's hand is " + dealerHand.printHand() + "and their score 
 //Jquery isn't working - really struggling to debug
 
 $('#dealer-card-values').append(document.createTextNode(dealerHand));
-
 
 
 //Player interaction logic
